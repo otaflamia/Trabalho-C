@@ -23,15 +23,15 @@ void caesar_decrypt(char *dest, const char *src, int shift)
     dest[i] = '\0'; // garante que seja adicionado ao último char o terminador de string
 }
 
-
-
-
-
-
 void xor_encrypt(char *dest, const char *src, const char *key)
 {
     int src_len = strlen(src); // verifica o tamanho da string de entrada.
-    int key_len = strlen(key); // verifica o tamanho da stindg chave.
+    int key_len = strlen(key); // verifica o tamanho da string chave.
+
+    if (key_len == 0) // Caso haja uma chave vazia.
+    {
+        return;
+    }
 
     for (int i = 0; i < src_len; i++)
     {                                        // utiliza um looping para verificar cada letra da string de entrada.
@@ -41,14 +41,9 @@ void xor_encrypt(char *dest, const char *src, const char *key)
 }
 
 void xor_decrypt(char *dest, const char *src, const char *key) // a implementação decrypt da função xor é igual a encrypt.
-{                            
+{
     xor_encrypt(dest, src, key);
 }
-
-
-
-
-
 
 void atbash_encrypt(char *dest, const char *src)
 {
