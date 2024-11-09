@@ -1,4 +1,6 @@
 #include "mycrypto.h"
+#include <ctype.h>
+#include <string.h>
 
 void caesar_encrypt(char *dest, const char *src, int shift)
 {

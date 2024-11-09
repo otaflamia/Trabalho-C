@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <assert.h>
 #include <string.h>
+#include <ctype.h>
 #include "mycrypto.h"  
+
 int main() {
     
     char caesar_enc[100], caesar_dec[100];

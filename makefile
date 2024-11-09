@@ -17,7 +17,8 @@ OBJ = $(SRC:.c=.o)
 TEST_OBJ = $(TEST_SRC:.c=.o)
 
 # Regra padrão para construir o projeto
-all: $(TARGET) $(TEST_TARGET)
+all: $(TARGET) $(TEST_TARGET)min
+
 
 # Compilar o programa principal
 $(TARGET): $(OBJ)
